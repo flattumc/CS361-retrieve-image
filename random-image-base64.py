@@ -7,7 +7,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 # Enable CORS for all domains on all routes. For production, specify the origin.
-CORS(app, origins=["https://cs361-retrieve-random-image-11184018779c.herokuapp.com/"])
+CORS(app,resources={r"/api/*": {"origins": "https://cs361-retrieve-random-image-11184018779c.herokuapp.com"}})
 
 @app.route('/api/random-image-base64')
 def random_image_base64():
