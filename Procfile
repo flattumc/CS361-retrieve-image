@@ -1,1 +1,1 @@
-web: gunicorn random_image_base:app
+web: gunicorn random-image-base64:app
