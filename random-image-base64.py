@@ -3,8 +3,11 @@ import requests
 from PIL import Image
 from io import BytesIO
 import base64
+from flask_cors import CORS
 
 app = Flask(__name__)
+# Enable CORS for all domains on all routes. For production, specify the origin.
+CORS(app)
 
 @app.route('/api/random-image-base64')
 def random_image_base64():
